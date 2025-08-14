@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRoyal Move</title>
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #1e1e1e;
+        color: white;
+        display: flex;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 80px;
+        background-color: #2b2b2b;
+        padding-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sidebar a {
+        text-decoration: none;
+        color: white;
+        font-size: 14px;
+        margin: 20px 0;
+        text-align: center;
+    }
+
+    .sidebar input {
+        width: 60px;
+        margin-top: 20px;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+    }
+
+    .signup {
+        background-color: #6aaa64;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        margin: 15px 0;
+        text-align: center;
+        width: 60px;
+    }
+
+    .login {
+        background-color: #444;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 5px;
+        text-align: center;
+        width: 60px;
+    }
+
+    /* Main Content */
+    .main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 30px;
+    }
+
+    /* Chessboard */
+    .chessboard {
+        display: grid;
+        grid-template-columns: repeat(8, 60px);
+        grid-template-rows: repeat(8, 60px);
+        border: 2px solid #333;
+    }
+
+    .white {
+        background-color: #f0f0d8;
+    }
+
+    .green {
+        background-color: #769656;
+    }
+
+    .chess-square {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+
+    /* Right Panel */
+    .right-panel {
+        max-width: 400px;
+    }
+
+    .right-panel h1 {
+        font-size: 28px;
+        margin-bottom: 10px;
+    }
+
+    .stats {
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: #ccc;
+    }
+
+    .play-online {
+        background-color: #6aaa64;
+        padding: 12px;
+        border-radius: 5px;
+        color: white;
+        font-size: 18px;
+        margin-bottom: 10px;
+        cursor: pointer;
+    }
+
+    .play-bots {
+        background-color: #333;
+        padding: 12px;
+        border-radius: 5px;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+    <a href="#">Play</a>
+    <a href="#">Puzzles</a>
+    <a href="#">Learn</a>
+    <a href="#">Watch</a>
+    <a href="#">News</a>
+    <a href="#">Social</a>
+    <a href="#">More</a>
+    <input type="text" placeholder="Search">
+    <div class="signup">Sign Up</div>
+    <div class="login">Log In</div>
+</div>
+
+<div class="main">
+    <!-- Chessboard -->
+    <div class="chessboard">
+        <!-- Rank 8 -->
+        <div class="green chess-square">&#9820;</div>
+        <div class="white chess-square">&#9822;</div>
+        <div class="green chess-square">&#9821;</div>
+        <div class="white chess-square">&#9819;</div>
+        <div class="green chess-square">&#9818;</div>
+        <div class="white chess-square">&#9821;</div>
+        <div class="green chess-square">&#9822;</div>
+        <div class="white chess-square">&#9820;</div>
+
+        <!-- Rank 7 -->
+        <div class="white chess-square">&#9823;</div>
+        <div class="green chess-square">&#9823;</div>
+        <div class="white chess-square">&#9823;</div>
+        <div class="green chess-square">&#9823;</div>
+        <div class="white chess-square">&#9823;</div>
+        <div class="green chess-square">&#9823;</div>
+        <div class="white chess-square">&#9823;</div>
+        <div class="green chess-square">&#9823;</div>
+
+        <!-- Empty ranks -->
+        <div class="green chess-square"></div>
+        <div class="white chess-square"></div>
+        <div class="green chess-square"></div>
+        <div class="white chess-square"></div>
+        <div class="green chess-square"></div>
+        <div class="white chess-square"></div>
+        <div class="green chess-square"></div>
+        <div class="white chess-square"></div>
+
+        <div class="white chess-square"></div>
+        <div class="green chess-square"></div>
+        <div class="white chess-square"></div>
+        <div class="green chess-square"></div>
+        <div class="white chess-square"></div>
+        <div class="green chess-square"></div>
+        <div class="white chess-square"></div>
+        <div class="green chess-square"></div>
+
+        <!-- Rank 2 -->
+        <div class="green chess-square">&#9817;</div>
+        <div class="white chess-square">&#9817;</div>
+        <div class="green chess-square">&#9817;</div>
+        <div class="white chess-square">&#9817;</div>
+        <div class="green chess-square">&#9817;</div>
+        <div class="white chess-square">&#9817;</div>
+        <div class="green chess-square">&#9817;</div>
+        <div class="white chess-square">&#9817;</div>
+
+        <!-- Rank 1 -->
+        <div class="white chess-square">&#9814;</div>
+        <div class="green chess-square">&#9816;</div>
+        <div class="white chess-square">&#9815;</div>
+        <div class="green chess-square">&#9813;</div>
+        <div class="white chess-square">&#9812;</div>
+        <div class="green chess-square">&#9815;</div>
+        <div class="white chess-square">&#9816;</div>
+        <div class="green chess-square">&#9814;</div>
+    </div>
+
+    <!-- Right Panel -->
+    <div class="right-panel">
+        <h1>Play Chess Online on the #1 Site!</h1>
+        <div class="stats">
+            19,549,162 Games Today &nbsp; | &nbsp; 208,483 Playing Now
+        </div>
+        <div class="play-online">Play Online</div>
+        <div class="play-bots">Play Bots</div>
+    </div>
+</div>
+
+</body>
+</html>
